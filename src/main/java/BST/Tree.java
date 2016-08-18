@@ -1,24 +1,33 @@
 package BST;
 
 /**
- * Created by saurav on 8/17/16.
+ * Created by sougata on 18/08/16.
  */
-public class Tree {
-    public TreeNode root;
-    public Tree() {}
+public interface Tree<Data extends Comparable<Data>> {
 
-    public Tree(TreeNode node) {
-        root = node;
-    }
+    /**
+     * Add a node in the tree with value n. Its O(lgn)
+     * @param data
+     */
+    void insert(Data data);
 
-    public TreeNode insert(int data, TreeNode root) {
-        if (root == null) {
-            root = new TreeNode(data);
-        } else if (data < root.data) {
-            root.left = insert(data, root);
-        } else {
-            root.right = insert(data, root);
-        }
-        return root;
-    }
+    /**
+     * Find a node in the tree with value n. Its O(lgn)
+     * @param data
+     * @return
+     */
+    boolean find(Data data);
+
+    /**
+     * Delete a node in the tree with value n. Its O(lgn)
+     * @param data
+     */
+    void delete(Data data);
+
+    /**
+     * Prints the entire tree in in/pre/post order. O(n)
+     * @param traverse_order
+     * @param root
+     */
+    void display(TreeImpl.Traverse_Order traverse_order, TreeNode root);
 }
