@@ -10,12 +10,21 @@ public class LinkedList {
    public LinkedList() {
    }
 
+    /**
+     * Add a node to the end of the linkedlist
+     * @param data: The data to add.
+     */
+
    public void addNode(int data) {
        Node temp = new Node(data);
        temp.next = head;
        head = temp;
    }
 
+    /**
+     * Create a linkedlist from an array, note that the first element becomes the tail of the linkedlist.
+     * @param arr: The array of integers to be used as the nodes of the linkedlist.
+     */
    public void createFromArray(int[] arr) {
        Node temp;
        for (int i = 0; i < arr.length; i++) {
@@ -26,6 +35,9 @@ public class LinkedList {
    }
 
    @Override
+   /**
+    * Overriding the toString method to enable printing the LinkedList instance.
+    */
    public String toString() {
        StringBuilder sb = new StringBuilder();
        Node temp = head;
