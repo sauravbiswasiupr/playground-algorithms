@@ -30,4 +30,10 @@ public interface Tree<Data extends Comparable<Data>> {
      * @param root
      */
     void display(TreeImpl.Traverse_Order traverse_order, TreeNode root);
+
+    /**
+     * Get the size of a binary search tree
+     * @return the size of the binary search tree
+     */
+    int getSize();
 }

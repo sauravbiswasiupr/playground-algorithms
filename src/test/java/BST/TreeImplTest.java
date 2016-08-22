@@ -32,7 +32,22 @@ public class TreeImplTest {
         Assert.assertTrue(this.tree.root.data.equals(0));
         Assert.assertTrue(this.tree.root.left == null);
         Assert.assertTrue(this.tree.root.right.data.equals(10));
+    }
 
+    // Check the size of a binary search tree
+    @Test
+    public void sizeOfBSTTest() {
+        // Default tree with 5 node
+        Assert.assertTrue(this.tree.getSize()==5);
+        Assert.assertFalse(this.tree.getSize() >= 6);
 
+        // tree without root node
+        final Tree tree1 = new TreeImpl();
+        Assert.assertTrue(tree1.getSize()==0);
+
+        // tree with only root node
+        final Tree tree2 = new TreeImpl();
+        tree2.insert(10);
+        Assert.assertTrue(tree2.getSize()==1);
     }
 }
