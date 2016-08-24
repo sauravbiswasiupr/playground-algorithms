@@ -97,4 +97,21 @@ public class TreeImpl<Data extends Comparable<Data>> implements Tree{
         return root;
     }
 
+    public int getSize() {
+        return size(this.root);
+    }
+
+    /**
+     * Private method to check the size of a bst
+     * @param root
+     *        root node of the tree
+     * @return  size of bst
+     */
+    private int size(final TreeNode root) {
+        if (root == null)
+            return 0;
+        else
+            return(size(root.left) + 1 + size(root.right));
+    }
+
 }
