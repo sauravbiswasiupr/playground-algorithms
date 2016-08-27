@@ -5,9 +5,9 @@ package BST;
  */
 
 public class TreeNode<Data extends Comparable<? super Data>> {
-    protected Data data;
-    protected TreeNode left;
-    protected TreeNode right;
+    public Data data;
+    public TreeNode left;
+    public TreeNode right;
 
     private TreeNode() {}
 
