@@ -8,10 +8,6 @@ import BST.TreeNode;
 public class MirrorBST {
 
     public TreeNode createMirror(final TreeNode root) {
-
-        if(root == null)
-            return null;
-
         if(root!=null){
             TreeNode temp = root.left;
             root.left = root.right;
