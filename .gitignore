@@ -4,7 +4,7 @@
 
 # IntelliJ project files
 .idea
-.gradle/
+.gradle
 *.iml
 build
 out
